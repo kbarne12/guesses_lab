@@ -4,18 +4,12 @@ const game = {
     smallestNum: 1,
     secretNum: null,
     prevGuesses: [],
-    getGuess: function() {
+    getGuess: function()
+    {
       let guess;
       while(isNaN(guess) || guess<this.smallestNum || guess>this.biggestNum)
-    {
-      guess = parseInt(prompt(`Enter a guess between ${this.smallestNum} and ${this.biggestNum}`));
+      {
+        guess = parseInt(prompt('Enter a guess between ${this.smallestNum} and ${this.biggestNum} the secret num is $this.secretNum}'));
+      }
+      return guess;
     }
-    },
-      play: function() {
-      this.secretNum = Math.floor(Math.random() * 
-        (this.biggestNum - this.smallestNum + 1)) + this.smallestNum
-    }
-  }
-game.getGuess()
-
-
