@@ -13,3 +13,23 @@ const game = {
       }
       return guess;
     }
+     render: function()
+       {
+         let lastGuess = this.prevGuesses.pop()
+         this.prevGuesses.push(lastguess)
+         console.log(lastGuess)
+         if(lastGuess === this.secretNum)
+         {
+           alert('Congrats! You guessed the number in $this.prevGuesses.length}guessess!')
+         }
+         if(lastGuess>this.secretNum)
+         {
+           alert('Your guess is too high Previous Guesses ${this.prevGuesses.join(',')}')
+         }
+         if(lastGuess<this.secretNum)
+         {
+           alert('YOur guess is too low Previouse Guesses ${this.prevGuesses.join(',')}')
+         }
+       }
+     
+    
